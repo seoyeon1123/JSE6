@@ -23,7 +23,6 @@ const print = (name, age) => {
 console.log(' ----------');
 
 const sum = (num1, num2 = 10) => num1 + num2;
-
 const result = sum(3, 4);
 const result2 = sum(300);
 console.log(result);
