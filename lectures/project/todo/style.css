@@ -67,6 +67,7 @@ body {
   border: 1px solid white;
   background-color: #ff7a74;
   cursor: pointer;
+  pointer-events: none;
   border-radius: 3px;
   opacity: 0.5;
 }
@@ -76,7 +77,7 @@ body {
   background-color: #ff0004;
 }
 
-.input__field button:active {
+.input__field button.active {
   opacity: 1;
   pointer-events: auto;
 }
