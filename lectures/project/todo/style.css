@@ -114,10 +114,15 @@ body {
   cursor: pointer;
 }
 
-.to-do-list li:hover .icon {
-  right: opx;
+.to-do-list li .delete-icon {
+  position: absolute; /* 삭제 아이콘의 위치를 상대적으로 설정하기 위해 필요 */
+  right: 10px; /* 오른쪽에 배치 */
+  top: 50%; /* 세로 중앙 정렬 */
+  transform: translateY(-50%); /* 세로 중앙 정렬 */
+  color: #ff7a74; /* 아이콘 색상 설정 */
+  cursor: pointer; /* 마우스 커서 모양 변경 */
+  font-size: 17px;
 }
-
 .card .card__footer {
   display: flex;
   width: 100%;
@@ -139,10 +144,27 @@ body {
   cursor: pointer;
   user-select: none;
   opacity: 0.6;
-  pointer-events: none;
 }
 
 .card__footer button.active {
   opacity: 1;
-  pointer-events: auto;
+}
+
+@media screen and (max-width: 767px) {
+  .card {
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* card 내의 요소를 맨 위와 맨 아래로 분산 정렬 */
+  }
+
+  .card__title {
+    font-family: 'Poetsen One';
+    font-size: 40px;
+    font-weight: 700;
+  }
+
+  .card__footer {
+    align-self: flex-end; /* footer 요소를 card 내에서 아래쪽으로 이동 */
+  }
 }
